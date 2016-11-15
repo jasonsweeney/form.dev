@@ -1,0 +1,10 @@
+<?php
+return array(
+    "update-success" => "<div class='row'><div class='small-10 small-centered columns'><div class='callout success' data-closable><strong>Great!</strong> Your changes have just been saved.<button class='close-button' aria-label='Close alert' type='button' data-close><span aria-hidden='true'>&times;</span></button></div></div></div>",
+    "update-failed" => "<div class='row'><div class='small-10 small-centered columns'><div class='callout success' data-closable><strong>Uh oh!</strong> There was a problem updating. Please try again!<button class='close-button' aria-label='Close alert' type='button' data-close><span aria-hidden='true'>&times;</span></button></div></div></div> ",
+    "create-success" => "<div class='row'><div class='small-10 small-centered columns'><div class='callout success' data-closable><strong>Great!</strong> Your new data has been saved.<button class='close-button' aria-label='Close alert' type='button' data-close><span aria-hidden='true'>&times;</span></button></div></div> </div> ",
+    "create-failed" => "<div class='row'><div class='small-10 small-centered columns'><div class='callout success' data-closable><strong>Uh oh!</strong> There was a problem creating. Please try again!<button class='close-button' aria-label='Close alert' type='button' data-close><span aria-hidden='true'>&times;</span></button></div></div> </div> ",
+    "delete-success" => "<div class='row'><div class='small-10 small-centered columns'><div class='callout success' data-closable><strong>Done!</strong> Your data has been removed.<button class='close-button' aria-label='Close alert' type='button'><span aria-hidden='true' data-close>&times;</span></button></div></div> </div> ",
+    "delete-failed" => "<div class='row'><div class='small-10 small-centered columns'><div class='callout success' data-closable><strong>Uh oh!</strong> There was a problem deleting. Please try again!<button class='close-button' aria-label='Close alert' type='button' data-close><span aria-hidden='true'>&times;</span></button></div>",
+);
+

@@ -1,0 +1,245 @@
+/**********************
+* Overwrite predefined
+* tags
+***********************/
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 140%;
+}
+
+h2 {
+    font-size: 140%;
+}
+h3 {
+    font-size: 112%;
+}
+
+a {
+    color: #2a3533;
+}
+
+.inline {
+    display: inline;
+}
+
+li {
+    list-style-type: none;
+}
+/**********************
+* Set Up Nav
+***********************/
+.header-top {
+    background-color: #495451;
+    color: #FFFFFF;
+    padding-top: 12px;
+    text-align: right;
+
+}
+
+.header-top a {
+    color: #FFFFFF;
+}
+
+.header-middle {
+    background-color: #2a3533;
+    color: #FFFFFF;
+    padding: 10px 0 0 0;
+    text-align: right;
+}
+
+.header-middle a {
+    color: #FFFFFF;
+}
+
+.header-bottom {
+    background-color: #eaebeb;
+    color: #2a3533;
+    margin-bottom: 30px;
+    padding: 8px 0;
+    text-align: right;
+}
+
+.header-sitemap {
+    background-color: #2a3533;
+    color: #FFFFFF;
+    padding-top: 12px;
+    text-align: left;
+}
+
+.header-sitemap-bottom {
+    background-color: #b5a160;
+    color: #2a3533;
+    margin-bottom: 30px;
+    padding: 8px 0;
+    text-align: right;
+    margin-bottom: 60px;
+}
+.header-extra-padding {
+    padding-top: 18px;
+}
+
+.header-extra-padding2 {
+    padding-top: 11px;
+}
+
+.nav li {
+    font-size: 115%;
+    display: inline;
+    padding-left: 20px;
+}
+
+.sitemapfunc li {
+    float: left;
+    font-size: 100%;
+    display: inline;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/**********************
+* Set Up Table
+***********************/
+table {
+    text-align: left;
+}
+th {
+    background-color: #2a3533;
+    color: #FFFFFF;
+}
+
+tr {
+    color: #2a3533;
+}
+
+
+/**********************
+* Set Up Footer
+***********************/
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    background-color: #eaebeb;
+    color: #2a3533;
+    text-align: right;
+}
+
+.footer a {
+    color: #2a3533;
+}
+.border-bottom {
+    border-bottom: thin solid #bebfbf;
+}
+
+.border-right {
+    border-right: thick solid #e9eaea;
+}
+
+.border-left {
+    border-left: thick solid #e9eaea;
+}
+
+/**********************
+* Redefine Foundation
+***********************/
+.row {
+    max-width: 2000px;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+/**********************
+* Redefine Buttons
+***********************/
+.button {
+    background-color: #495451;
+}
+.button a{
+    color: #FFFFFF;
+}
+.lesspad {
+    padding: 5px 9px 1px 9px;
+    margin-bottom: 5px;
+    margin-top: 1px;
+}
+.buttonwidth {
+width: inherit;
+}
+.text_button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.form-button {
+    margin-left: 14px;
+}
+
+/**********************
+* Redefine Buttons
+***********************/
+.alert li{
+    list-style-type: none;
+}
+
+.extratop {
+    margin-top: 39px;
+}
+.extrabottom {
+    margin-bottom: 50px;
+}
+
+.extratop2 {
+    margin-top: 107px;
+}
+
+.marginright {
+    margin-right: 17px;
+}
+
+.fa-times-circle {
+    color: #ea0000;
+}
+
+.bing {
+    transition: 1s;
+    display: none;
+}
+
+a:focus  + .bing{
+     display: block;
+ }
+
+.marg9 {
+    margin-top: 7px;
+}
+
