@@ -1,4 +1,4 @@
-@inject('contact' , 'App\Contact')
+@inject('contact','App\Contact')
 @extends('app')
 
 @section('content')
@@ -22,7 +22,7 @@
                     <td>{{ ucfirst($contact->getByID(Request::segment(2))->lastname) }}</td>
                     <td>{{ ucfirst($contact->getByID(Request::segment(2))->email) }}</td>
                     <td>
-                        {!! Form::open(['route' => ['contacts.destroy' , $contact->getByID(Request::segment(2))->id] , 'method' => 'DELETE']) !!}
+                        {!! Form::open(['route' => ['contacts.destroy' , $contact->getByID(Request::segment(2))] , 'method' => 'DELETE']) !!}
                         <div class="form-group">
                             {!! Form::button('<span class="fa fa-trash"></span>' , ['type' => 'submit' , 'class' => 'delete-button' , 'name' => 'delete']) !!}</i>
                         </div>

@@ -13,7 +13,7 @@
 
 Route::get('/', 'Auth\AuthController@getLogin');
 
-Route::group(['middleware' => 'auth'], function() {
+Route::group(['middleware' => 'auth'], function () {
     Route::resource('contacts', 'ContactsController');
 });
 

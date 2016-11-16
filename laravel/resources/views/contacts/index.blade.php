@@ -19,11 +19,12 @@
                 <tbody>
                 @foreach($contact->getAll() as $row)
                     <tr>
-                        <td><a href="{{ Request::segment(1) }}/{{ $row['id'] }}">{{ ucfirst($row['firstname']) }}</a></td>
+                        <td><a href="{{ Request::segment(1) }}/{{ $row['id'] }}">{{ ucfirst($row['firstname']) }}</a>
+                        </td>
                         <td>{{ ucfirst($row['lastname']) }}</td>
                         <td class="show-for-medium">{{ $row['email'] }}</td>
                         <td class="show-for-medium">
-                            {!! Form::open(['route' => ['contacts.destroy' , $row['id'] , 'method' => 'DELETE']]) !!}
+                            {!! Form::open(['route' => ['contacts.destroy' , $row['id']] , 'method' => 'DELETE']) !!}
                             <div class="form-group">
                                 {!! Form::button('<span class="fa fa-trash"></span>' , ['type' => 'submit' , 'class' => 'delete-button' , 'name' => 'delete']) !!}</i>
                             </div>

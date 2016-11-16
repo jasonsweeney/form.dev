@@ -19,10 +19,11 @@ class ContactsController extends Controller
     {
         $array = [
             'firstname' => '',
-            'lastname' => '',
-            'email' => '',
-            'action' => 'create'
+            'lastname'  => '',
+            'email'     => '',
+            'action'    => 'create'
         ];
+
         return view('contacts.index', compact('array'));
     }
 
@@ -49,14 +50,18 @@ class ContactsController extends Controller
         if ($errors = $contactsForm->validate($data)) {
             return $errors;
         } else {
-            $contact = new Contact;
-            $contact->firstname = Input::get('firstname');
-            $contact->lastname = Input::get('lastname');
-            $contact->email = Input::get('email');
 
-            $contact->save();
+            $data = [
+                'firstname' => Input::get('firstname'),
+                'lastname'  => Input::get('lastname'),
+                'email'     => Input::get('email')
+            ];
+
+            $contact = new Contact;
+            $contact->addContact($data);
 
             Request::session()->flash('success', trans('database.create-success'));
+
             return Response::json(array('redirect' => 'contacts', 200));
         }
     }
@@ -72,7 +77,7 @@ class ContactsController extends Controller
     {
         $array['action'] = 'update';
 
-        return view(Request::segment(1).'.show', compact('array'));
+        return view(Request::segment(1) . '.show', compact('array'));
     }
 
     /**
@@ -100,23 +105,21 @@ class ContactsController extends Controller
         $data = Input::only('firstname', 'lastname', 'email');
 
         $data = [
-            'id' => $id,
+            'id'        => $id,
             'firstname' => $data['firstname'],
-            'lastname' => $data['lastname'],
-            'email' => $data['email']
+            'lastname'  => $data['lastname'],
+            'email'     => $data['email']
         ];
 
         if ($errors = $contactsForm->validate($data)) {
             return $errors;
         } else {
-            $contact = Contact::find($id);
-            $contact->firstname = Input::get('firstname');
-            $contact->lastname = Input::get('lastname');
-            $contact->email = Input::get('email');
+            $contact = new Contact;
+            $contact->updateContact($data, $id);
 
-            $contact->save();
-             $return = '/contacts/' . $id;
+            $return = '/contacts/' . $id;
             Request::session()->flash('success', trans('database.update-success'));
+
             return Response::json(array('redirect' => "$return", 200));
         }
     }
@@ -131,6 +134,10 @@ class ContactsController extends Controller
     function destroy($id)
     {
         Contact::find($id)->delete();
-        return redirect()->to(Request::segment(1))->with('success', trans('database.delete-success'));
+        Request::session()->flash('success', trans('database.delete-success'));
+
+        return Response::json(array('redirect' => '/contacts', 200));
+
+        //return redirect()->to('contacts')->with('success', trans('database.delete-success'));
     }
 }
